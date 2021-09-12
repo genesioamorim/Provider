@@ -1,0 +1,34 @@
+{
+  "name": "Pokedex",
+  "version": "1.0.0",
+  "description": "js theme",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "start:prod": "webpack",
+    "serve": "webpack serve"
+  },
+  "keywords": [
+    "project"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "font-awesome": "4.7.0",
+    "jquery": "3.6.0"
+  },
+  "devDependencies": {
+    "@webpack-cli/serve": "^1.5.2",
+    "css-loader": "^3.5.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "4.0.0",
+    "webpack-livereload-plugin": "3.0.2"
+  }
+}

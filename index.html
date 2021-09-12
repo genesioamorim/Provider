@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Pokédex</title>
+
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="/dist/style.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">Pokédex</h4>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <img src="src/assets/images/PikPng.com_pokemon-go-logo-png_319697.png" width="164" height="55" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Pokédex</h1>
+          <p class="lead text-muted">Fique por dentro das novidades dos Pokémons</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="album py-5">
+      <div class="container">
+        <nav class="navbar navbar-light  pl-0 mb-5">
+          <div id="searchForm" class="row w-100">
+            <div class="col-7">
+              <input id="inputSearch" class="form-control mr-sm-2 w-60" type="search"
+                placeholder="Digite o nome do pokemon que deseja buscar" aria-label="Search">
+            </div>
+            <div class="col-5">
+              <button id="buttonSearch" onclick="searchPoke()"
+                class="btn btn-outline-success my-2 my-sm-0 mr-2">Buscar</button>
+              <button id="buttonSearch" onclick="reset()" class="btn btn-outline-primary my-2 my-sm-0">Limpar
+                Busca</button>
+                <div id="loader"></div>
+            </div>
+
+          </div>
+        </nav>
+
+      
+
+
+
+        <div id="card" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="titleModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div id="modalBody" class="modal-body">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="text-muted py-5">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Voltar ao topo</a>
+      </p>
+
+    </div>
+  </footer>
+  <script src="/dist/site-bundle.js"></script>
+  <script src="/src/core/services/poke-api.service.js"></script>
+  <script src="/src/core/controllers/list-poke.js"></script>
+  <script src="/src/core/controllers/search.js"></script>
+</body>
+
+</html>
