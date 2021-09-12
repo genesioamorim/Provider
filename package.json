@@ -4,7 +4,7 @@
   "description": "js theme",
   "main": "index.js",
   "scripts": {
-    "start": "",
+    "start": "webpack --watch",
     "start:prod": "webpack",
     "serve": "webpack serve"
   },
